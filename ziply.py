@@ -25,7 +25,19 @@ def add_arguments(parser_obj: argparse.ArgumentParser) -> None:
 
 
 def get_router_stats_table(ip_addr: str) -> dict:
-    """Get the Router's Statistics Tables."""
+    """
+    Get the Router's Statistics Tables.
+    
+    Use this function to load the statistics as a dictionary of dictionaries,
+    keying the individual headings to their related tables.
+
+    Examples
+    --------
+    >>> from ziply import get_router_stats_table
+    >>> stats_dict = get_router_stats_table(ip_addr="192.168.254.254")
+    >>> print(stats_dict)
+    {"WAN Summary": {"WAN Link": "Up", "WAN Connection": "Connected",...}}
+    """
     # Get Router HTML
     resp = requests.get(ZIPLY_ROUTER_URL.format(ip_addr=ip_addr))
     resp.raise_for_status()
