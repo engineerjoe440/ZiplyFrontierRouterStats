@@ -1,6 +1,10 @@
-# ZiplyFrontierRouterStats
+# ZiplyFrontier Router Statistics Collector
 *Scrape Ziply/Frontier Routers for Generic Network Statistics*
 
+This single-file Python utility can be used when trying to interact with Ziply
+(formerly Frontier) router devices to gather network statistics. This can be for
+generating data used by services like Home Assistant, for automation purposes
+such as configuring dynamic-DNS, etc.
 
 ### Command-Line-Interface
 This script will support being called from the command-line, directly.
