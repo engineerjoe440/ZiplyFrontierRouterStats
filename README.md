@@ -33,3 +33,12 @@ print(stats_dict)
 # Prints the following:
 # {"WAN Summary": {"WAN Link": "Up", "WAN Connection": "Connected",...}}
 ```
+
+### Installation
+At this time, this script is a single Python file that should be downloaded, and
+vendored into software manually. There is no Python packaging, and said
+packaging may, or may not, be developed later.
+
+To install, simply download the `ziply.py` file and store in a location that may
+be accessed, either by calling the file directly, or by importing as shown above
+for more pragmatic use.
