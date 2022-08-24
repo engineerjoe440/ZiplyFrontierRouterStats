@@ -11,6 +11,8 @@ import argparse
 import requests
 from bs4 import BeautifulSoup
 
+__version__ = "0.0.1"
+
 ZIPLY_ROUTER_URL = "http://{ip_addr}/cgi-bin/home.ha"
 
 parser = argparse.ArgumentParser(
