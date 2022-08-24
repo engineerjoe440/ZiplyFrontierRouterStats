@@ -6,7 +6,7 @@
 This script will support being called from the command-line, directly.
 
 ```shell
-$> python3 ziply.py
+$ python3 ziply.py
 WAN Summary
 --------------------------------------------------------------------------------
     WAN Link:             Up
