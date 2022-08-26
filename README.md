@@ -34,6 +34,26 @@ print(stats_dict)
 # {"WAN Summary": {"WAN Link": "Up", "WAN Connection": "Connected",...}}
 ```
 
+Should you decide that you'd rather just use the printing functionality, that's
+an option, too! You may use the printing function directly without any trouble:
+
+```python
+# Import the Printing Function
+from ziply import print_data_table
+
+print_data_table(ip_addr="192.168.254.254")
+# Prints the following:
+#WAN Summary
+#--------------------------------------------------------------------------------
+#    WAN Link:             Up
+#    WAN Connection:       Connected
+#    Link Type:            ONT WAN
+#    Connection Type:      DHCP Client
+#    Link Speed:           1000/Full Mbps
+#...more...
+```
+
+
 ### Installation
 At this time, this script is a single Python file that should be downloaded, and
 vendored into software manually. There is no Python packaging, and said
@@ -42,3 +62,17 @@ packaging may, or may not, be developed later.
 To install, simply download the `ziply.py` file and store in a location that may
 be accessed, either by calling the file directly, or by importing as shown above
 for more pragmatic use.
+
+#### Requirements
+Some additional packages are required for the full functionality of this tool.
+At a bare minimum, [`requests`](https://pypi.org/project/requests/) and
+[`BeautifulSoup`](https://pypi.org/project/beautifulsoup4/) are required.
+
+Additionally, this tool is built in such a way that it may serve a simple web
+API that will provide the latest statistics upon request of the endpoint:
+
+> `http://<hostname-or-ip>/api/v1/stats`
+
+To support this functionality, the additional packages:
+[`FastAPI`](https://fastapi.tiangolo.com/) and
+[`Uvicorn`](http://www.uvicorn.org/) are required.
