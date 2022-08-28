@@ -38,7 +38,8 @@ def add_arguments(parser_obj: argparse.ArgumentParser) -> None:
         help="the IP address of the router to be queried")
     parser_obj.add_argument("-s", "--host-server", action="store_true",
         help="host a simple web-server for the information")
-    parser_obj.add_argument("-p", "--port", help="http port to serve")
+    parser_obj.add_argument("-p", "--port", default=8080,
+        help="http port to serve")
 
 
 def get_router_stats_table(ip_addr: str) -> dict:
